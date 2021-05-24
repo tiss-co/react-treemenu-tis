@@ -1,5 +1,4 @@
 import React, { memo, useState, useEffect, useRef } from 'react';
-import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 import { throttle } from 'lodash';
 
@@ -10,9 +9,7 @@ import { DownIcon } from './assets/icons';
 
 import css from './styles.module.scss';
 
-const { createPortal } = ReactDOM;
-
-export const TreeMenu = memo(({ title, itemClassName, titleClassName, items, onClick, darkMode = false }) => {
+export const TreeMenu = memo(({ title, itemClassName, titleClassName, items, onClick, darkMode = false, createPortal }) => {
   const portal = useRef();
   const button = useRef();
 
@@ -119,5 +116,6 @@ TreeMenu.propTypes = {
     })
   ).isRequired,
   onClick: PropTypes.func,
-  darkMode: PropTypes.bool
+  darkMode: PropTypes.bool,
+  createPortal: PropTypes.func.isRequired,
 };

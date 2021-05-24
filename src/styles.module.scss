@@ -1,0 +1,44 @@
+$font-family-medium: Helvetica-Neue-Medium;
+
+.menuContainer {
+  * {
+    font-family: $font-family-medium;
+  }
+  z-index: 2;
+  position: absolute;
+}
+
+.button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  padding: 10px 0;
+
+  > svg {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+:global #portal {
+  position: absolute;
+  z-index: 100001;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  :local .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1;
+
+    &.hide {
+      display: none !important;
+    }
+  }
+}

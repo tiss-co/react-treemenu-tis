@@ -1,28 +1,79 @@
 # react-treemenu-tis
 
-> 
+>
 
 [![NPM](https://img.shields.io/npm/v/react-treemenu-tis.svg)](https://www.npmjs.com/package/react-treemenu-tis) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+![react-treemenu-tis Banner](https://user-images.githubusercontent.com/76048512/119355099-1956f400-bcba-11eb-885f-decdd2955bc7.gif)
 
 ## Install
 
 ```bash
-npm install --save react-treemenu-tis
+npm i react-treemenu-tis
+```
+
+or
+
+```bash
+yarn add react-treemenu-tis
 ```
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'react-treemenu-tis'
+import { TreeMenu } from 'react-treemenu-tis'
 import 'react-treemenu-tis/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  const items = [
+    {
+      title: 'Home'
+    },
+    {
+      title: 'Products',
+      items: [
+        {
+          title: 'Product 1'
+        },
+        {
+          title: 'Product 2'
+        },
+        {
+          title: 'Product 3'
+        }
+      ]
+    },
+    {
+      title: 'Contact us',
+      items: [
+        {
+          title: 'Mail'
+        },
+        {
+          title: 'Phone'
+        }
+      ]
+    },
+    {
+      title: 'Logout'
+    }
+  ]
+
+  return (
+    <TreeMenu
+      titleClassName='TreeMenuTitle'
+      itemClassName='TreeMenuItem'
+      title='Tree Menu'
+      items={items}
+      onClick={(item) => console.log(`"${item}" selected`)}
+      darkMode={false}
+    />
+  )
 }
+
+export default App
 ```
 
 ## License

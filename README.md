@@ -78,6 +78,9 @@ const App = () => {
 export default App
 ```
 
+>`Note:` You can add infinity levels of items in TreeMenu.
+
+
 ## License
 
 MIT © [boof-tech](https://github.com/boof-tech)

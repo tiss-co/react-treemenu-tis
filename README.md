@@ -22,6 +22,7 @@ yarn add react-treemenu-tis
 
 ```jsx
 import React from 'react'
+import { createPortal } from 'react-dom'
 
 import { TreeMenu } from 'react-treemenu-tis'
 import 'react-treemenu-tis/dist/index.css'
@@ -68,6 +69,7 @@ const App = () => {
       title='Tree Menu'
       items={items}
       onClick={(item) => console.log(`"${item}" selected`)}
+      createPortal={createPortal}
       darkMode={false}
     />
   )

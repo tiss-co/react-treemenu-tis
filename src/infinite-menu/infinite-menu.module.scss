@@ -9,7 +9,7 @@ $bg-box-2-dark: #3a3b3c;
 $bg-circle-hover-light: #d8dade;
 $bg-circle-hover-dark: #3a3b3c;
 
-.menu {
+.menu_InfiniteMenuTis {
   all: unset;
   box-sizing: border-box;
   background-color: $bg-box-light;
@@ -22,7 +22,7 @@ $bg-circle-hover-dark: #3a3b3c;
   border: 1px solid $bg-box-2-light;
   border-radius: 3px;
 
-  .item {
+  .item_InfiniteMenuTis {
     width: 100%;
     height: 40px;
 
@@ -30,17 +30,17 @@ $bg-circle-hover-dark: #3a3b3c;
       background-color: $bg-circle-hover-light;
     }
 
-    > .link {
+    > .link_InfiniteMenuTis {
       text-decoration: none;
       color: $font-light-light;
 
-      &.selected {
+      &.selected_InfiniteMenuTis {
         color: $font-menu-active !important;
       }
     }
 
-    > .link,
-    > .subMenuButton {
+    > .link_InfiniteMenuTis,
+    > .subMenuButton_InfiniteMenuTis {
       box-sizing: border-box;
       padding-left: 10px;
       display: flex;
@@ -50,31 +50,31 @@ $bg-circle-hover-dark: #3a3b3c;
     }
   }
 
-  .subMenuButton {
+  .subMenuButton_InfiniteMenuTis {
     position: relative;
     background-color: transparent;
     border: none;
     color: $font-light-light;
 
-    &:hover > .menu {
+    &:hover > .menu_InfiniteMenuTis {
       display: block;
     }
 
-    &.selected {
+    &.selected_InfiniteMenuTis {
       color: $font-menu-active !important;
 
-      > .arrowIcon {
+      > .arrowIcon_InfiniteMenuTis {
         fill: $font-menu-active !important;
       }
     }
 
-    > .menu {
+    > .menu_InfiniteMenuTis {
       display: none;
       top: 0;
       left: $menuWidth - 1;
     }
 
-    > .arrowIcon {
+    > .arrowIcon_InfiniteMenuTis {
       position: absolute;
       right: 8px;
       top: 50%;
@@ -85,24 +85,24 @@ $bg-circle-hover-dark: #3a3b3c;
     }
   }
 
-  &.Dark {
+  &.Dark_InfiniteMenuTis {
     background-color: $bg-box-dark;
     border-color: $bg-box-2-dark;
 
-    .item {
+    .item_InfiniteMenuTis {
       &:hover {
         background-color: $bg-circle-hover-dark;
       }
 
-      > .link {
+      > .link_InfiniteMenuTis {
         color: $font-light-dark;
       }
     }
 
-    .subMenuButton {
+    .subMenuButton_InfiniteMenuTis {
       color: $font-light-dark;
 
-      > .arrowIcon {
+      > .arrowIcon_InfiniteMenuTis {
         fill: $font-light-dark;
       }
     }

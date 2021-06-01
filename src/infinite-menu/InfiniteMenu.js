@@ -4,16 +4,16 @@ import { RightIcon } from '../assets/icons';
 import css from './infinite-menu.module.scss';
 
 const InfiniteMenu = ({ className, items, onClick, selected, darkMode = false }) => (
-   <ul className={classNames(css.menu, {
-      [css.Dark]: darkMode
+   <ul className={classNames(css.menu_InfiniteMenuTis, {
+      [css.Dark_InfiniteMenuTis]: darkMode
    })}>
       {items?.length > 0 &&
          items.map(({ title, items: subItems }) => (
-            <li key={title} className={css.item}>
+            <li key={title} className={css.item_InfiniteMenuTis}>
                {subItems ? (
                   <div
-                     className={classNames(css.subMenuButton, {
-                        [css.selected]: subItems.filter(subItem => subItem?.title === selected)?.length > 0,
+                     className={classNames(css.subMenuButton_InfiniteMenuTis, {
+                        [css.selected_InfiniteMenuTis]: subItems.filter(subItem => subItem?.title === selected)?.length > 0,
                      })}
                   >
                      {title}
@@ -24,12 +24,12 @@ const InfiniteMenu = ({ className, items, onClick, selected, darkMode = false })
                         darkMode={darkMode}
                         selected={selected}
                      />
-                     <RightIcon className={css.arrowIcon} />
+                     <RightIcon className={css.arrowIcon_InfiniteMenuTis} />
                   </div>
                ) : (
                   <div
-                     className={classNames(css.link, {
-                        [css.selected]: selected === title,
+                     className={classNames(css.link_InfiniteMenuTis, {
+                        [css.selected_InfiniteMenuTis]: selected === title,
                      }, className)}
                      onClick={() => onClick(title)}
                   >

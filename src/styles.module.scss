@@ -1,6 +1,6 @@
 $font-family-medium: Helvetica-Neue-Medium;
 
-.menuContainer {
+.menuContainer_TreeMenuTis {
   * {
     font-family: $font-family-medium;
   }
@@ -8,7 +8,7 @@ $font-family-medium: Helvetica-Neue-Medium;
   position: absolute;
 }
 
-.button {
+.button_TreeMenuTis {
   position: relative;
   border: none;
   background-color: transparent;
@@ -37,7 +37,7 @@ $font-family-medium: Helvetica-Neue-Medium;
     height: 100vh;
     z-index: 1;
 
-    &.hide {
+    &.hide_TreeMenuTis {
       display: none !important;
     }
   }

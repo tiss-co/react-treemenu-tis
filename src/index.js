@@ -64,7 +64,7 @@ export const TreeMenu = memo(({ title, itemClassName, titleClassName, items, onC
       <button
         ref={button}
         onClick={toggle}
-        className={classNames(css.button, titleClassName)}
+        className={classNames(css.button_TreeMenuTis, titleClassName)}
         {...hoverEventListeners}
       >
         {title} <DownIcon />
@@ -75,7 +75,7 @@ export const TreeMenu = memo(({ title, itemClassName, titleClassName, items, onC
           <React.Fragment>
             {(active || hover) && (
               <nav
-                className={css.menuContainer}
+                className={css.menuContainer_TreeMenuTis}
                 style={{
                   top: popoverPosition.top,
                   left: popoverPosition.left,
@@ -93,8 +93,8 @@ export const TreeMenu = memo(({ title, itemClassName, titleClassName, items, onC
             )}
 
             <div
-              className={classNames(css.overlay, {
-                [css.hide]: !active,
+              className={classNames(css.overlay_TreeMenuTis, {
+                [css.hide_TreeMenuTis]: !active,
               })}
               onClick={toggle}
             ></div>

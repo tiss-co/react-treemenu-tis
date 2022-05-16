@@ -9,7 +9,7 @@ import { DownIcon } from './assets/icons';
 
 import css from './styles.module.scss';
 
-export const TreeMenu = memo(({ title, itemClassName, titleClassName, items, onClick, darkMode = false, createPortal }) => {
+export const TreeMenu = memo(({ title, itemClassName, titleClassName, items, onClick, darkMode = false, createPortal, updateMenu = { current: () => { } } }) => {
   const portal = useRef();
   const button = useRef();
 
@@ -57,6 +57,12 @@ export const TreeMenu = memo(({ title, itemClassName, titleClassName, items, onC
       left: buttonRect.left + window.pageXOffset,
     };
     setPoverPosition(overlayNewPosition);
+  };
+
+  updateMenu.current = menu => {
+    setActive(false);
+    onClick && onClick(menu?.title, title?.path);
+    setSelected(menu?.title);
   };
 
   return (
@@ -118,4 +124,5 @@ TreeMenu.propTypes = {
   onClick: PropTypes.func,
   darkMode: PropTypes.bool,
   createPortal: PropTypes.func.isRequired,
+  updateMenu: PropTypes.func,
 };

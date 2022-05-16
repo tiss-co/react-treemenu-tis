@@ -42,11 +42,9 @@ const App = () => {
   ];
 
   useEffect(() => {
-    setTimeout(() => {
-      updateMenu.current({
-        title: 'Phone'
-      });
-    }, 5000);
+    updateMenu.current({
+      title: 'Phone'
+    });
   }, []);
 
   return (

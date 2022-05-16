@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
 import { TreeMenu } from 'react-treemenu-tis';
 import 'react-treemenu-tis/dist/index.css';
 
 const App = () => {
+  const updateMenu = useRef();
 
   const items = [
     {
@@ -40,6 +41,14 @@ const App = () => {
     },
   ];
 
+  useEffect(() => {
+    setTimeout(() => {
+      updateMenu.current({
+        title: 'Phone'
+      });
+    }, 5000);
+  }, []);
+
   return (
     <div className='App'>
       <div className='Title'>
@@ -53,6 +62,7 @@ const App = () => {
         onClick={item => console.log(`"${item}" selected`)}
         createPortal={createPortal}
         darkMode={false}
+        updateMenu={updateMenu}
       />
     </div>
   );

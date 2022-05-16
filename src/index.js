@@ -60,8 +60,6 @@ export const TreeMenu = memo(({ title, itemClassName, titleClassName, items, onC
   };
 
   updateMenu.current = menu => {
-    setActive(false);
-    onClick && onClick(menu?.title, title?.path);
     setSelected(menu?.title);
   };
 
